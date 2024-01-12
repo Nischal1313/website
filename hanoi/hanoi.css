@@ -1,0 +1,158 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Outfit, "Times New Roman", fantasy;
+}
+
+nav {
+    margin-top: 0;
+    background-color: grey;
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+    opacity: 95%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin-right: 5rem;
+    font-family: Georgia, serif;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+nav ul li:first-child {
+    float: left;
+    font-family: "Courier New", "Times New Roman", Serif, serif;
+    font-size: larger;
+}
+
+#nisse:hover {
+    background-color: whitesmoke;
+}
+
+#center {
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.tower-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+}
+
+.tower {
+    height: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 250px;
+}
+
+ul li {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    list-style: none;
+    font-family: fantasy;
+    font-size: larger;
+    color: limegreen;
+}
+
+#click {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+#box-model {
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman", serif;
+}
+
+#rules {
+    display: none;
+    border: solid 2px black;
+    width: 30%;
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+}
+
+#buttons {
+    margin-top: 10px;
+}
+
+#rules_button {
+    margin: 5px;
+}
+
+#game_stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* Add margin as needed */
+}
+
+#game_stat h3 {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#rules p {
+    text-align: center;
+}
+
+#rules button {
+    position: absolute;
+    top: 10px; /* Adjust the top value to position the button as needed */
+    right: 10px; /* Position the button to the right */
+}

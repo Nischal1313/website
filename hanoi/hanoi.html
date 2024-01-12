@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tower of Hanoi Online!</title>
+    <script src="hanoi.js" defer></script>
+    <link href="hanoi.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+</head>
+<body id="toimi">
+
+<div id="rules">
+    <button onclick="hideRules()">X</button>
+    <h3>Try to get the pyramid to the left/the right side.</h3>
+    <p>Rules: </p>
+    <ol>
+        <li>Smaller on Top: A smaller disk can be placed on top of a larger disk, but not vice versa.</li>
+        <li>One Disk at a Time: Only one disk can be moved at a time.</li>
+        <li>From Top of a Stack: A disk can only be moved from the top of one pyramid to the top of another pyramid.
+        </li>
+        <li>Think about every move carefully. Five invalid moves will reset the game.</li>
+    </ol>
+</div>
+<div id="box-model">
+    <h2> Tower of Hanoi!</h2>
+</div>
+
+<div id="center">
+    <div class="tower-container">
+        <div class="tower" id="l_tower">
+        </div>
+        <div class="tower" id="m_tower">
+        </div>
+        <div class="tower" id="r_tower">
+        </div>
+    </div>
+</div>
+<div id="click">
+    <div class="buttons">
+        <button id="l_tower_move_top_piece_left"> ←</button>
+        <button id="l_tower_move_top_piece_right"> →</button>
+    </div>
+    <div class="buttons">
+        <button id="m_tower_move_top_piece_left"> ←</button>
+        <button id="m_tower_move_top_piece_right"> →</button>
+    </div>
+    <div class="buttons">
+        <button id="r_tower_move_top_piece_left"> ←</button>
+        <button id="r_tower_move_top_piece_right"> →</button>
+    </div>
+</div>
+<div id="buttons">
+    <label for="discs"></label>
+    <select id="discs">
+        <option value="three">3 discs</option>
+        <option value="four">4 discs</option>
+        <option value="five">5 discs</option>
+        <option value="six">6 discs</option>
+    </select>
+    <button id="start" type="button">Play!</button>
+    <button id="rules_button" onclick="showRules()">Show Rules</button>
+    <div id="overlay" onclick="hideRules()"></div>
+</div>
+
+
+<div id="game_stat" class="info">
+    <h3 id="moves">Moves: 0</h3>
+    <h3 id="i_moves">Invalid moves: 0</h3>
+        <h3 id="minimum"></h3>
+        <h3 id="game_state"></h3>
+</div>
+
+</body>
+</html>
