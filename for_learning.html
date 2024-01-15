@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Opacity</title>
+  <style>
+    #targetElement {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      opacity: 0.5; /* Initial opacity */
+      transition: opacity 0.5s ease; /* Smooth transition effect */
+    }
+  </style>
+</head>
+<body>
+  <button onclick="show_input('targetElement')">Change Opacity</button>
+  <div id="targetElement">This is the element</div>
+
+  <script>
+    function show_input(theId) {
+      const display = document.getElementById(theId);
+      display.style.opacity = 1;
+    }
+  </script>
+</body>
+</html>
