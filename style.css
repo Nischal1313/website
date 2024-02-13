@@ -1,13 +1,17 @@
 body {
-    font-family: Outfit, "Courier New", monospace, "Times New Roman", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: black;
+}
+
+span {
+    color: red;
 }
 
 html {
     scroll-behavior: smooth;;
 }
+
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
     background-color: transparent; /* Background color of the scrollbar */
@@ -55,44 +59,32 @@ html {
     }
 }
 
-#logo{
-    transition: transform 2s ease; /* Optional: Add a smooth transition effect */
-}
-
-#logo:hover{
-    transform: rotate(360deg);
-}
-
 nav {
-    background-color: #ffffff;
+    background-color: black;
     padding: 5px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
+    height: 10vh;
 }
 
 nav ul {
+    margin-top: 1vw;
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
 }
 
-.logo {
-    padding-top: 5px;
-    order: -1; /* This places the logo first in the flex order */
-    margin-right: 700px;
-    margin-left: 35px;
-}
-
-#logo {
-    height: 60px; /* Adjust the height as needed */
-    width: auto;
+.navdot {
+    color: transparent;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    .navdot {
+        color: red
+    }
+
 }
 
 nav ul li {
@@ -101,39 +93,55 @@ nav ul li {
 }
 
 nav a {
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
-    color: #262626;
+    color: #f4f4f4;
     font-weight: bold;
-    margin-right: 0; /* Adjust the margin between navigation items */
+    margin-right: 0;
     margin-left: 0;
+    font-family: Outfit, "Major Mono Display", sans-serif;
+    background-color: black;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+#name {
+    color: white;
+    background: black;
+    order: -1;
+    margin-right: 40vw;
+    margin-left: 0.6vw;
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-family: "Major Mono Display", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #262626;
+    color: #f4f4f4;
     font-weight: bold;
 }
 
-.pic {
-    width: 58vw;
-    height: auto; /* Maintain aspect ratio */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    border: 0; /* Reset border */
-}
-
 .main-div {
-    display: flex;
-    margin-bottom: 120px;
+    margin-top: 10vh;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-bottom: 0;
+    background-color: black;
+    height: 95vh;
 }
 
 .mainp {
-    padding: 10px 10px 10px 30px;
-    font-size: 32px;
+    margin-top: 0;
+    margin-left: 5vw;
+    color: #9d9d9d;
+    padding-top: 15vh;
+    text-align: left;
+    /*font-size: 62px;*/
+    font-size: 5.3vw;
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-    max-width: 40vw;
-    line-height: 40px;
+    max-width: 80vw;
+    line-height: 12vh;
 }
 
 .it {
@@ -141,37 +149,38 @@ a {
     font-weight: normal;
 }
 
-.sub-main-div {
-    display: flex;
-}
-
 .locationdiv {
+    position: absolute;
+    left: 50vw;
+    color: white;
     font-size: 18px;
-    margin-top: 120px;
-    margin-left: 30px;
-}
-
-.locationdiv p {
-    margin: 10px;
-    padding: 0;
-}
-
-.location {
-    font-size: 20px;
-}
-
-.locationinfo {
+    margin-top: 4.5vh;
+    margin-left: 0;
+    margin-right: 0;
+    width: 15vw;
     font-family: 'Ibm Plex Sans', "Space Grotesk", Outfit, "Times New Roman", sans-serif;
 }
 
 .aboutdiv {
+    background-color: black;
     display: flex;
+    margin-top: 20vh;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.aboutdiv .aboutdiv1 h2 {
+    font-size: 5vw;
+    color: #f4f4f4;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 .aboutdiv img {
     border-radius: 5px;
-    margin-right: 15px;
-    margin-left: 210px;
+    margin-right: 0;
+    margin-left: 20vw;
     width: 25vw;
 }
 
@@ -180,73 +189,108 @@ a {
     width: 45vw;
 }
 
-.aboutdiv1 h2, .digitaltools h2 {
-    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-    font-size: 25px;
-    margin-top: 0;
-}
-
-.aboutdiv1 p, .digitaltools p {
+.aboutdiv1 p {
+    color: #f4f4f4;
     font-family: 'Ibm Plex Sans', "Space Grotesk", Outfit, "Times New Roman", sans-serif;
-    font-size: 18px;
+    font-size: 1.8vw;
     line-height: 25px;
 }
 
-.digitaltools {
-    margin-top: 80px;
-    display: flex;
-}
-
-.digitaltools .digitaltools1 {
+.skill {
+    margin-top: 20vh;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    color: white;
+    font-size: 5vw;
     margin-left: 30px;
-    width: 45vw;
+    margin-bottom: 5vh;
 }
 
-.digitaltools .digitaltools2 {
-    margin-left: 210px;
+.digitaltools {
+    margin-top: 0;
+    display: flex;
+    color: white;
+}
+
+.digitaltools-boxes {
+    margin-top: 0;
+    background-color: #222222;
+    margin-left: 30px;
     margin-right: 30px;
-    width: 45vh;
+    border-radius: 30px;
+    width: 50vw;
+    height: 32vw;
 }
 
-.digitaltools2 ul {
+.digitaltools-boxes h2 {
+    color: #f4f4f4;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    font-size: 2vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+}
+
+.digitaltools-boxes p {
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    color: #f4f4f4;
+    font-family: 'Ibm Plex Sans', "Space Grotesk", Outfit, "Times New Roman", sans-serif;
+    font-size: 1.5vw;
+    line-height: 25px;
+}
+
+
+.digitaltools-boxes ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.digitaltools2 ul li {
+.digitaltools-boxes ul li {
+    margin-left: 2vw;
     font-size: 30px;
     color: #AEAE9D;
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
 }
 
-.project-text {
+.project {
+    margin-top: 20vh;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    color: white;
+    font-size: 5vw;
     margin-left: 30px;
+    margin-bottom: 5vh;
 }
 
 .myproject {
-    margin-top: 50px;
+    color: white;
+    margin-top: 10vh;
     text-align: center;
-    width: 100%;
+    width: 99vw;
     display: flex;
+    flex-wrap: wrap;
     margin-left: 0;
     margin-right: 0;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 article {
-    margin-right: 30px;
-    margin-left: 30px;
-    border: solid 1px #AEAE9D;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #222222;
+    margin: 20px;
+    border-radius: 30px;
     box-sizing: border-box;
-    width: 35vw;
+    width: 36vw;
+}
+
+article h3 {
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    color: #AEAE9D;
 }
 
 article:hover {
     transform: scale(1.1); /* Enlarge the card on hover */
-}
-
-article a:hover{
-    color: #9C9C83;
+    border: solid 1px white;
 }
 
 article p {
@@ -260,19 +304,26 @@ article a img {
 }
 
 #contact {
-    font-size: 30px;
+    margin-top: 20vh;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    color: white;
+    font-size: 5vw;
+    margin-left: 30px;
+    margin-bottom: 5vh;
 }
 
 .contactme {
-    margin-bottom: 100px;
-}
-
-#contact {
-    margin-top: 100px;
+    margin-bottom: 0;
+    display: flex;
 }
 
 .contactme ul {
     list-style-type: none;
+}
+
+.contactme ul li p {
+    font-size: 25px;
+    color: white;
 }
 
 .contactme a {
@@ -280,7 +331,7 @@ article a img {
 }
 
 .contactme ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-decoration: none;
     font-size: 30px;
     color: #AEAE9D;
@@ -291,14 +342,100 @@ article a img {
     color: #4D4D4D;
 }
 
-li p{
-    font-size: 25px;
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.formdiv {
+    margin: auto;
+    color: #666666;
+    font-family: 'Ibm Plex Sans', "Space Grotesk", Outfit, "Times New Roman", sans-serif;
+    font-size: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 55vh;
+    width: 32vw;
+}
+
+.contact .formdiv form .emaillabel input {
+    width: 22vw;
+    height: 6vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+}
+
+.contact .formdiv form .messagelabel textarea {
+    font-size: 1.5vw;
+    width: 22vw;
+    height: 12vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+}
+
+.formdiv button {
     color: black;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    width: 6vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.formdiv button:hover {
+    background-color: #666666;
+    color: white;
+}
+
+.fromdiv form label {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+button {
+    margin-bottom: 7vh;
+}
+
+#popup-message {
+    background-color: white;
+    color: black;
+    font-size: 34px;
+    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+    display: none;
+    position: fixed;
+    bottom: 15vh;
+    left: 52vw;
+    height: 50vh;
+    width: 32vw;
+    padding: 1vw;
+    margin: 0;
 }
 
 footer {
+    color: white;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
     font-size: 25px;
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
+}
+
+.logo {
+    padding-top: 5px;
+    order: -1; /* This places the logo first in the flex order */
+    margin-right: 700px;
+    margin-left: 35px;
+}
+
+#logo {
+    height: 10vh; /* Adjust the height as needed */
+    width: auto;
 }

@@ -8,16 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&family=Nova+Square&family=Outfit:wght@600&family=Space+Grotesk:wght@500&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Mello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Nischal Gautam</title>
 
 </head>
 <body>
 <nav id="main_nav">
     <ul>
-        <li class="logo"><a id="lang" href="#"><img id="logo" src="photos/logo.jpg" alt="logo"></a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contactme">contact</a></li>
+                <li><a id="name" href="#">GAUTAM<span class="navdot">.</span></a></li>
+<!--        <li class="logo"><a id="lang" href="#"><img id="logo" src="photos/GAUTAM1.jpg" alt="logo"></a></li>-->
+        <li><a href="#about">about<span class="navdot">.</span></a></li>
+        <li><a href="#projects">projects<span class="navdot">.</span></a></li>
+        <li><a onclick="showPopup()" href="#contactme">contact<span class="navdot">.</span></a></li>
     </ul>
 </nav>
 
@@ -27,47 +32,38 @@
 </div>
 
 <div class="main-div">
-    <div><img class="pic"
-              src="https://images.unsplash.com/photo-1491002052546-bf38f186af56?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D"
-              alt="snow pic"></div>
-    <div>
-        <p class="mainp">Hi there! My name is <strong>Nischal Gautam</strong>. A freshman at
-            <a href="https://www.metropolia.fi/en/academics/bachelors-degrees/information-technology" target="_blank"
-               rel="noopener noreferrer" class="it">Metropolia</a> UAS studying <strong>Information Technology.</strong>
-        </p>
-
-        <div class="locationdiv"><p class="location">Location</p>
-            <p class="locationinfo">Helsinki, Finland</p>
-            <p class="locationinfo" id="helsinki-time"></p></div>
+    <p class="mainp">Hi there! I am <strong style="color:white "> NISCHAL GAUTAM</strong><span
+    >.</span>
+        A freshman at <a style="color: #9d9d9d"
+                         href="https://www.metropolia.fi/en/academics/bachelors-degrees/information-technology"
+                         target="_blank" rel="noopener noreferrer" class="it">Metropolia</a>
+        UAS studying <strong style="color: white">Information Technology<span>.</span></strong>
+    </p>
+    <div class="locationdiv">
+        Helsinki, Finland
     </div>
+
 </div>
 
 <a id="about" href="#" class="invisible-link"></a>
-
 <div id="aboutdiv" class="aboutdiv">
-    <div class="aboutdiv1"><h2>about me</h2>
+    <div class="aboutdiv1"><h2>about me<span>.</span></h2>
         <p>I am currently in the midst of my first year of studies and have successfully
             completed half of the academic year. So I am yet to choose my major. </p>
-        <p>Passionate about <em>AI,
+        <p>Passionate about <em>design,
             ML, and problem-solving</em>.</p>
         <p>Born In Nepal and moved to Finland in 2011.</p>
         <p>In my free time, I like to work on personal projects [like this website] and evolve my
-            understanding of coding/software and related topics. Outside of software related things I play football and
-            do indoors climbing.</p>
-        <p>Currenty I am actively working on this website and learning about MiniMax algorithm for TicTacToe. While
-            attending school and working.</p>
+            understanding of coding/software and related topics.</p>
     </div>
     <div><img alt="cv" src="photos/snowcv.jpg"></div>
 </div>
-
-<a id="projects" href="#" class="invisible-link"></a>
+<h2 class="skill">my skill set<span>.</span></h2>
 
 <div class="digitaltools">
-    <div class="digitaltools1"><h2>my digital tool box</h2>
-        <p>here are the languages and tools I have worked with in my projects</p>
-        <p class="project-info">You can learn more about the projects by clicking on them. Additionally, detailed
-            documentation for the school projects is available in the provided PDF.</p></div>
-    <div class="digitaltools2">
+    <div class="digitaltools-boxes">
+        <h2>toolbox</h2>
+        <p>languages and tools I am familiar worked with after using them on my projects</p>
         <ul>
             <li>JavaScript</li>
             <li>CSS</li>
@@ -75,12 +71,32 @@
             <li>PYTHON</li>
             <li>FIGMA</li>
             <li>MySQL</li>
+            <li>GitHub</li>
+        </ul>
+    </div>
+
+    <div class="digitaltools-boxes">
+        <h2>currently learning </h2>
+        <p>here are the languages and tools I am working with for my projects</p>
+        <ul>
+            <li>Linux</li>
+            <li>Digital Circuits</li>
+            <li>Networks</li>
+            <li>SASS</li>
+            <li>Bootstap</li>
+            <li>Programing Raspberry Pi</li>
         </ul>
     </div>
 </div>
 
 
-<h1 class="project-text">my projects</h1>
+<div class="digitaltools">
+
+</div>
+
+<a id="projects" href="#" class="invisible-link"></a>
+
+<h2 class="project">my projects<span>.</span></h2>
 
 <div class="myproject">
     <article>
@@ -94,63 +110,88 @@
     <article>
         <h3>Hangman</h3>
         <a target="_blank" href="hangman/hangman.html"
-           class="projectlink"><img alt="hangman" src="/photos/Screenshot (93).png"></a>
+           class="projectlink"><img alt="hangman" src="photos/Screenshot%20(101).png"></a>
         <p>Hangman with optional lives</p>
     </article>
 
-</div>
-<div class="myproject">
     <article>
         <h3>Lentäen Karkuteillä</h3>
-        <a target="_blank" href="https://github.com/Nischal1313/Lentopeli_ryhma_E"><img src="/photos/Screenshot (95).png" alt="first school project"></a>
-        <p>1. project work in school: a terminal-based game <a target="_blank"
-                                                               href="https://www.canva.com/design/DAFwwwrErR4/5roJojBBFLbfNp-EiK-png/view"><i
+        <a target="_blank" href="https://github.com/Nischal1313/Lentopeli_ryhma_E"><img
+                src="photos/Screenshot%20(102).png"
+                alt="first school project"></a>
+        <p>a terminal-based game. documentation ><a target="_blank"
+                                                    href="https://www.canva.com/design/DAFwwwrErR4/5roJojBBFLbfNp-EiK-png/view"><i
                 class="fas fa-file-download"></i></a></p>
     </article>
     <article>
         <h3>Lentäen Karkuteillä [in the web]</h3>
-        <a target="_blank" href="https://github.com/Nischal1313/project2"><img src="/photos/Screenshot%20(95).png" alt="second school project"></a>
-        <p>the game can be played in the web <a target="_blank"
-                                                href="https://www.canva.com/design/DAFwwwrErR4/5roJojBBFLbfNp-EiK-png/view"
-                                                download="filename"><i
+        <a target="_blank" href="https://github.com/Nischal1313/project2"><img src="photos/Screenshot%20(95).png"
+                                                                               alt="second school project"></a>
+        <p>the game can be played in the web. documentation > <a target="_blank"
+                                                                 href="https://www.canva.com/design/DAFwwwrErR4/5roJojBBFLbfNp-EiK-png/view"
+                                                                 download="filename"><i
                 class="fas fa-file-download"></i></a>
         </p>
     </article>
+    <article>
+        <h3>another website of mine</h3>
+        <a target="_blank"
+           href="https://nischal1313.github.io/website/"><img alt="my other portfolio"
+                                                              src="photos/Screenshot%20(103).png"></a>
+        <p>I like designing websites here is another one
+        </p>
+    </article>
+    <article>
+        <h3>current project at school</h3>
+        <a target="_blank" href="pdfs/H1_A1_Gautam.pdf"><img alt="working atm" src="photos/Screenshot%20(104).png"></a>
+        <p>project details by clicking</p>
+    </article>
 </div>
+
+<h2 id="contact">contact me<span>.</span></h2>
+
+<div class="contact">
+    <div class="contactme">
+        <ul>
+            <li><i class="fas fa-envelope"></i> <a target="_blank" href="mailto:28nisse@gmail.com">28nisse@gmail.com</a>
+            </li>
+            <li><p> more about me</p></li>
+            <li><i class="fab fa-github"></i> <a target="_blank" href="https://github.com/Nischal1313">GitHub</a>
+            </li>
+            <li><i class="fas fa-address-card"></i><a target="_blank" download="Nischal_CV.pdf"
+                                                      href="pdfs/CV_Nischal(ENG).pdf">
+                download resume(Eng)</a>
+            </li>
+            <li><i class="fas fa-address-card"></i><a target="_blank" download="Nischal_CV.pdf"
+                                                      href="pdfs/CV_Nischal(Fi).pdf">
+                lataa resume(Fi)</a>
+            </li>
+        </ul>
+    </div>
+    <div class="formdiv">
+        <form
+                action="https://formspree.io/f/xeqyakdn"
+                method="POST"
+        >
+            <label class="emaillabel">
+                email <span>*</span>
+                <input placeholder="jondoe@gov.com" required spellcheck="false" type="email" name="email">
+            </label><br>
+            <label class="messagelabel">
+                content <span>*</span>
+                <textarea placeholder="Hi, Gautam! I am Jon Doe from the F.B.I." required spellcheck="false"
+                          name="message"></textarea>
+            </label><br>
+            <button onclick="showPopup()" id="submit-button" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<div id="popup-message"><p>Your message has been successfully sent. Thank you for reaching out. Expect to hear back from
+    me soon. =]</p></div>
 
 
 <a id="contactme" href="#" class="invisible-link"></a>
-
-<h1 id="contact" class="project-text">contact me</h1>
-
-<div class="contactme">
-    <ul>
-        <li><i class="fas fa-envelope"></i> <a target="_blank" href="mailto:28nisse@gmail.com">28nisse@gmail.com</a>
-        </li>
-        <li><p> more about me</p></li>
-        <li><i class="fab fa-github"></i> <a target="_blank" href="https://github.com/Nischal1313">GitHub</a>
-        </li>
-        <li><i class="fas fa-address-card"></i><a target="_blank" download="Nischal_CV.pdf"
-                                                  href="pdfs/CV_Nischal(ENG).pdf">
-            download resume(Eng)</a>
-        </li>
-        <li><i class="fas fa-address-card"></i><a target="_blank" download="Nischal_CV.pdf"
-                                                  href="pdfs/CV_Nischal(Fi).pdf">
-            lataa resume(Fi)</a>
-        </li>
-    </ul>
-</div>
-
-<script>
-    function updateHelsinkiTime() {
-        const helsinkiTime = new Date().toLocaleTimeString('en-US', {timeZone: 'Europe/Helsinki', hour12: false});
-        document.getElementById('helsinki-time').innerText = `${helsinkiTime}`;
-    }
-
-    setInterval(updateHelsinkiTime, 1000);
-    updateHelsinkiTime();
-</script>
-
 <footer>Copyright &copy; Nischal</footer>
 </body>
 </html>
