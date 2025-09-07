@@ -119,7 +119,82 @@ function showPopup() {
     // Hide the popup after 5.5 seconds with fade-out
     setTimeout(function() {
         popup.style.opacity = '0';
-        popup.style.transform = 'translate(-50%, -50%) scale(
-    popup.style.display = 'none';
-  }, 5555);
+        popup.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        
+        // Actually hide the element after animation completes
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 300);
+    }, 5555);
 }
+
+// Add form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const emailInput = document.querySelector('input[name="email"]');
+    const messageInput = document.querySelector('textarea[name="message"]');
+    const submitButton = document.getElementById('submit-button');
+
+    // Email validation
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Form validation on submit
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            
+            // Reset previous error styles
+            emailInput.style.borderColor = '#333';
+            messageInput.style.borderColor = '#333';
+            
+            // Validate email
+            if (!emailInput.value || !validateEmail(emailInput.value)) {
+                emailInput.style.borderColor = '#ff4444';
+                isValid = false;
+            }
+            
+            // Validate message
+            if (!messageInput.value || messageInput.value.trim().length < 10) {
+                messageInput.style.borderColor = '#ff4444';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+        });
+    }
+
+    // Real-time validation feedback
+    if (emailInput) {
+        emailInput.addEventListener('blur', function() {
+            if (this.value && validateEmail(this.value)) {
+                this.style.borderColor = '#4CAF50';
+            } else if (this.value) {
+                this.style.borderColor = '#ff4444';
+            } else {
+                this.style.borderColor = '#333';
+            }
+        });
+    }
+
+    if (messageInput) {
+        messageInput.addEventListener('blur', function() {
+            if (this.value && this.value.trim().length >= 10) {
+                this.style.borderColor = '#4CAF50';
+            } else if (this.value) {
+                this.style.borderColor = '#ff4444';
+            } else {
+                this.style.borderColor = '#333';
+            }
+        });
+    }
+});
