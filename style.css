@@ -133,7 +133,7 @@ nav a {
     color: #9d9d9d;
     font-size: clamp(2rem, 8vw, 5.3rem);
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-    line-height: 1.2;
+    line-height: 1;
     max-width: 100%;
     margin: 0;
     word-wrap: break-word;
