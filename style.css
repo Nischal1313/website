@@ -18,7 +18,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
     background-color: transparent;
 }
 
@@ -238,7 +238,6 @@ nav a {
     outline-offset: 4px;
 }
 
-
 .myproject {
     color: white;
     display: grid;
@@ -246,7 +245,9 @@ nav a {
     gap: 2rem;
     padding: 0 2rem;
     margin: 2rem 0;
+    align-items: start;
 }
+
 
 article {
     background-color: #222222;
@@ -264,7 +265,7 @@ article h3 {
 
 article:hover {
     transform: scale(1.05);
-    border: solid 1px white;
+    border: solid 1px red;
 }
 
 article p {
@@ -284,38 +285,40 @@ article a img {
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
     color: white;
     font-size: clamp(2rem, 6vw, 4rem);
-    margin: 5rem 2rem 2rem 2rem;
+    margin: 5rem 2rem 2rem;
 }
 
 .contact {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
     padding: 0 2rem;
     margin: 2rem 0;
-}
-
-.contactme {
-    flex: 1;
+    margin-top: 4rem;
 }
 
 .contactme ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .contactme ul li {
-    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #AEAE9D;
     font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
 }
 
 .contactme ul li p {
-    font-size: clamp(1.1rem, 2.8vw, 1.6rem);
-    color: white;
     margin: 0;
+    color: white;
 }
 
 .contactme a {
@@ -328,86 +331,6 @@ article a img {
     color: #4D4D4D;
 }
 
-.formdiv {
-    flex: 1;
-    color: #666666;
-    font-family: 'IBM Plex Sans', "Space Grotesk", Outfit, "Times New Roman", sans-serif;
-    font-size: clamp(1rem, 3vw, 2rem);
-}
-
-.formdiv form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.formdiv form label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.formdiv form .emaillabel input,
-.formdiv form .messagelabel textarea {
-    width: 100%;
-    padding: 1rem;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.formdiv form .messagelabel textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.formdiv button {
-    color: black;
-    background-color: white;
-    border-radius: 12px;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-}
-
-.formdiv button:hover {
-    background-color: #666666;
-    color: white;
-}
-
-#popup-message {
-    background-color: white;
-    color: black;
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
-    border-radius: 15px;
-    max-width: 90vw;
-    text-align: center;
-    z-index: 200;
-    box-shadow: 0 10px 30px rgba(255,255,255,0.3);
-}
-
-footer {
-    color: white;
-    text-align: center;
-    margin: 3rem 0;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-family: "Space Grotesk", Outfit, "Courier New", "Times New Roman", sans-serif;
-}
-
-/* Mobile Specific Styles */
 @media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -463,11 +386,6 @@ footer {
     .contact {
         flex-direction: column;
     }
-
-    .scroll,
-    .scroll-prompt {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -495,7 +413,6 @@ footer {
     }
 }
 
-/* Landscape mobile orientation */
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .main-div {
         min-height: auto;
@@ -504,10 +421,5 @@ footer {
 
     .mainp {
         font-size: clamp(1.5rem, 4vw, 2.5rem);
-    }
-
-    .scroll,
-    .scroll-prompt {
-        display: none;
     }
 }
